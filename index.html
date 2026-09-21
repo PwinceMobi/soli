@@ -304,12 +304,13 @@
   .track.dragging{cursor:grabbing;scroll-behavior:auto;scroll-snap-type:none}
   .slide{flex:0 0 auto;scroll-snap-align:start}
   .slide img{
-    width:250px;height:250px;object-fit:cover;display:block;
-    border-radius:14px;border:2px solid rgba(59,123,245,.3);
+    width:340px;height:340px;object-fit:contain;display:block;
+    background:rgba(255,255,255,.03);
+    border-radius:14px;
     -webkit-user-drag:none;user-select:none;
-    transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+    transition:transform .3s ease,box-shadow .3s ease;
   }
-  .slide img:hover{transform:scale(1.045);box-shadow:0 14px 36px rgba(0,0,0,.55);border-color:var(--teal)}
+  .slide img:hover{transform:scale(1.045);box-shadow:0 14px 36px rgba(0,0,0,.55)}
   .memes-empty{
     display:grid;place-items:center;gap:8px;text-align:center;
     padding:46px 24px;border:2px dashed rgba(59,123,245,.35);border-radius:16px;
@@ -424,7 +425,7 @@
     .lore,.buy,.community,.loop{padding:56px 0}
     .tk{padding:56px 0}
     .memes{padding:32px 0 36px}
-    .slide img{width:200px;height:200px}
+    .slide img{width:260px;height:260px}
   }
 </style>
 </head>
@@ -502,8 +503,7 @@
     <h2>Contract address</h2>
     <div class="panel">
       <div class="ca">
-        <code id="addr">mt7gpYRGVwGy4BRpkJP1EkVG3ngxxG87B7r3TZ4pump</code>
-        <button class="copy" type="button" data-copy="#addr">Copy address</button>
+        <code id="addr">Coming Soon</code>
       </div>
       <p class="verify">Check this address before you swap. Anyone can deploy a token with the same name and the same snake.</p>
     </div>
@@ -636,18 +636,15 @@
     <div class="slider">
       <button class="arrow prev" type="button" id="memePrev" aria-label="Previous memes" aria-controls="memeTrack" hidden>&#8249;</button>
 
-      <!-- EDIT: delete this placeholder once you drop memes into the list below -->
-      <div class="memes-empty" id="memesEmpty">
-        <b>🐍 Meme vault loading…</b>
-        <span>Drop the meme images into <code>images/</code>, then uncomment the slides below and delete this block.</span>
-      </div>
-
-      <ul class="track" id="memeTrack" tabindex="0" role="region" aria-label="Meme gallery, scrollable" hidden>
-        <!-- EDIT: one <li> per meme. Remove hidden="" from the <ul> above and delete .memes-empty.
-        <li class="slide"><img src="images/m-soli-1.jpg" alt="SOLI meme" loading="lazy" draggable="false"></li>
-        <li class="slide"><img src="images/m-soli-2.jpg" alt="SOLI meme" loading="lazy" draggable="false"></li>
-        <li class="slide"><img src="images/m-soli-3.jpg" alt="SOLI meme" loading="lazy" draggable="false"></li>
-        -->
+      <ul class="track" id="memeTrack" tabindex="0" role="region" aria-label="Meme gallery, scrollable">
+        <li class="slide"><img src="memes/111 ChatGPT Image Sep 21, 2026, 10_56_27 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
+        <li class="slide"><img src="memes/2222 ChatGPT Image Sep 21, 2026, 10_56_27 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
+        <li class="slide"><img src="memes/333 ChatGPT Image Sep 21, 2026, 10_56_45 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
+        <li class="slide"><img src="memes/ChatGPT Image Sep 21, 2026, 11_14_02 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
+        <li class="slide"><img src="memes/ChatGPT Image Sep 21, 2026, 11_14_15 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
+        <li class="slide"><img src="memes/ChatGPT Image Sep 21, 2026, 11_18_52 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
+        <li class="slide"><img src="memes/ChatGPT Image Sep 21, 2026, 11_18_57 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
+        <li class="slide"><img src="memes/ChatGPT Image Sep 21, 2026, 11_21_14 PM.png" alt="SOLI meme" loading="lazy" draggable="false"></li>
       </ul>
 
       <button class="arrow next" type="button" id="memeNext" aria-label="More memes" aria-controls="memeTrack" hidden>&#8250;</button>
@@ -674,14 +671,13 @@
     <p style="max-width:60ch">SOLI is only as strong as the community behind him.</p>
     <p style="max-width:60ch">Join the early believers, share the lore, and help spread SOLI across the chain. The soul of Solana isn't just a token — it's alive. <strong>Join the soul. 🚀</strong></p>
     <div class="cta">
-      <a class="btn primary" href="https://x.com/soli_onchain" target="_blank" rel="noopener">🔗 Follow on X</a>
+      <a class="btn primary" href="https://x.com/soli_coin" target="_blank" rel="noopener">🔗 Follow on X</a>
     </div>
 
     <div class="ca-feature">
       <p class="lbl">📄 Contract Address</p>
-      <code id="addrMain">mt7gpYRGVwGy4BRpkJP1EkVG3ngxxG87B7r3TZ4pump</code>
+      <code id="addrMain">Coming Soon</code>
       <div class="ca-actions">
-        <button class="copy" type="button" data-copy="#addrMain">Copy address</button>
         <span class="ca-warn">Always verify before you swap — never trust an address from a DM.</span>
       </div>
     </div>
@@ -691,7 +687,7 @@
       <li><a href="https://dexscreener.com/solana/mt7gpYRGVwGy4BRpkJP1EkVG3ngxxG87B7r3TZ4pump" target="_blank" rel="noopener"><span class="li-icon">📊</span><span class="li-text"><b>DexScreener</b><span>View live chart</span></span></a></li>
       <!-- EDIT: confirm the buy link (pump.fun page for this mint) -->
       <li><a href="https://pump.fun/coin/mt7gpYRGVwGy4BRpkJP1EkVG3ngxxG87B7r3TZ4pump" target="_blank" rel="noopener"><span class="li-icon">🚀</span><span class="li-text"><b>pump.fun</b><span>Buy $SOLI</span></span></a></li>
-      <li><a href="https://x.com/soli_onchain" target="_blank" rel="noopener"><span class="li-icon">🐦</span><span class="li-text"><b>X</b><span>@soli_onchain</span></span></a></li>
+      <li><a href="https://x.com/soli_coin" target="_blank" rel="noopener"><span class="li-icon">🐦</span><span class="li-text"><b>X</b><span>@soli_coin</span></span></a></li>
     </ul>
   </div>
 </section>
@@ -707,8 +703,8 @@
   <div class="wrap">
     <p class="copyline">©️ 2026 SOLI · $SOLI — The Soul of Solana</p>
     <ul class="links">
-      <li><span style="opacity:.72">CA:</span> <code id="addrFooter">mt7gpYRGVwGy4BRpkJP1EkVG3ngxxG87B7r3TZ4pump</code></li>
-      <li><a href="https://x.com/soli_onchain" target="_blank" rel="noopener">X</a></li>
+      <li><span style="opacity:.72">CA:</span> <code id="addrFooter">Coming Soon</code></li>
+      <li><a href="https://x.com/soli_coin" target="_blank" rel="noopener">X</a></li>
       <li><a href="https://dexscreener.com/solana/mt7gpYRGVwGy4BRpkJP1EkVG3ngxxG87B7r3TZ4pump" target="_blank" rel="noopener">Chart</a></li>
     </ul>
     <p class="risk">Meme coin. DYOR. Not financial advice. There is no company behind $SOLI, no revenue, and no promise of profit. Crypto assets are volatile and you can lose everything you put in.</p>
